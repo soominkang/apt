@@ -103,6 +103,7 @@ def createProposals(mergedTracks, featSpat, cutOffLevel, xmax=np.inf, ymax=np.in
         for p in xrange(nrProposals):
                 # clusterformat: a merged ID, and trackIDs t1 and t2
                 [mergedID, t1, t2] = mergedTracks[p][0:3]
+                t1 = int(t1); t2 = int(t2)
                 
                 if t1 < nrTracks:
                     # if a trackID is lower than nrTracks it is a trajectory
